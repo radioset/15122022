@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import AppBar from "@material-ui/core/AppBar";
 import Box from "@material-ui/core/Box";
@@ -7,16 +7,11 @@ import Dialog from "@material-ui/core/Dialog";
 import DialogContent from "@material-ui/core/DialogContent";
 import Divider from "@material-ui/core/Divider";
 import MuiToolbar from "@material-ui/core/Toolbar";
-import Menu from "@material-ui/core/Menu";
-import MenuItem from "@material-ui/core/MenuItem";
 import Grid from "@material-ui/core/Grid";
-import Popover from "@material-ui/core/Popover";
 import Typography from "@material-ui/core/Typography";
-import Link from "@material-ui/core/Link";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { makeStyles, useTheme as useMuiTheme } from "@material-ui/core/styles";
 
-import Tabs from '@mui/material/Tabs';
 import Tab from "@material-ui/core/Tab";
 
 import { useTranslation } from "PersonalKanban/providers/TranslationProvider";
@@ -341,10 +336,10 @@ const Toolbar: React.FC<ToolbarProps> = (props) => {
         </Box>
         <Box display="flex" flexGrow={1} />
 
-          <Tab label="Сергей Бабин" onClick={() => contentCardKanbanChange("Сергей Бабин")} />
-          <Tab label="Александр Голубков" onClick={() => contentCardKanbanChange("Александр Голубков")} />
-          <Tab label="Александр Плаксюк" onClick={() => contentCardKanbanChange("Александр Плаксюк")} />
-        
+        <Tab label="Сергей Бабин" onClick={() => contentCardKanbanChange("Сергей Бабин")} />
+        <Tab label="Александр Голубков" onClick={() => contentCardKanbanChange("Александр Голубков")} />
+        <Tab label="Александр Плаксюк" onClick={() => contentCardKanbanChange("Александр Плаксюк")} />
+
         <Box display="flex">
           <AddColumnButton onSubmit={onNewColumn} />
           &nbsp;
